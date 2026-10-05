@@ -87,7 +87,7 @@ plt.show()
 
 ### Results
 
-![Likelihood of Skills Requested in the US Job Postings](3_Project\images\skill_demand_top3_data_roles.png)
+![Likelihood of Skills Requested in the US Job Postings](images\skill_demand_top3_data_roles.png)
 
 *Bar graph visualizing the salary for the top 3 data roles and their top 5 skills associated with each.*
 
@@ -121,7 +121,7 @@ plt.show()
 
 ### Results
 
-![Trending Top Skills for Data Analysts in the US](3_Project\images\skill_trend_DA.png)  
+![Trending Top Skills for Data Analysts in the US](images\skill_trend_DA.png)  
 *Line graph showing how the leading Data Analyst skills changed in demand during 2023.*
 
 ### Findings
@@ -149,10 +149,10 @@ plt.show()
 
 #### Results
 
-![Salary Distributions of Data Jobs in the US](3_Project\images\salary_poxplot.png)  
+![Salary Distributions of Data Jobs in the US](images\salary_poxplot.png)  
 *Box plot visualizing the salary distributions for the top 6 data job titles.*
 
-![Salary Distributions based on Data Analyst skills](3_Project\images\data_analyst_salary_by_skills.png)  
+![Salary Distributions based on Data Analyst skills](images\data_analyst_salary_by_skills.png)  
 *Bar Chart empazsizing skill to salary relationship with in Data Analyst roles*
 
 ### Findings
@@ -172,21 +172,25 @@ I then narrowed the salary analysis to Data Analyst positions and compared skill
 from matplotlib.ticker import PercentFormatter
 
 # Create a scatter plot
-scatter = sns.scatterplot(
-    data=df_DA_skills_tech_high_demand,
-    x='skill_percent',
-    y='median_salary',
-    hue='technology',  # Color by technology
-    palette='bright',  # Use a bright palette for distinct colors
-    legend='full'  # Ensure the legend is shown
-)
+df_DA_skills_high_demand.plot(kind='scatter', x='skill_percent',y='median_salary')
+ax = plt.gca()
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K'))
+ax.xaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+#set axis labels, title and legend
+plt.xlabel('percent of Data Analyst Jobs')
+plt.ylabel('Meidan Yearly Salary ($USD)')
+plt.title('Most Optimal Skills for Data Analysts in the US')
+
+#adust layout and displat plot
+plt.tight_layout()
 plt.show()
 
 ```
 
 #### Results
 
-![Most Optimal Skills for Data Analysts in the US with Coloring by Technology](images/Most_Optimal_Skills_for_Data_Analysts_in_the_US_with_Coloring_by_Technology.png)  
+![Most Optimal Skills for Data Analysts in the US with Coloring by Technology](images\most_optimal-skills_for_data_analysts_in_the_us.png)  
 *Scatter plot comparing skill demand and median salary for Data Analyst skills, grouped by technology category.*
 
 ### Findings
