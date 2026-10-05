@@ -70,7 +70,7 @@ Each Jupyter notebook for this project aimed at investigating specific aspects o
 I first identified the three most common data job titles and then examined the five skills that appeared most frequently for each role. This provides a comparison of the technical skills employers are requesting across different types of data positions.
 
 
-View my notebook with detailed steps here: [2_Skill_Demand](3_Project\2_Skills_Count.ipynb).
+View my notebook with detailed steps here: [2_Skill_Demand](3_Project/2_Skills_Count.ipynb).
 
 ### Visualize Data
 
@@ -87,7 +87,7 @@ plt.show()
 
 ### Results
 
-![Likelihood of Skills Requested in the US Job Postings](images\skill_demand_top3_data_roles.png)
+![Likelihood of Skills Requested in the US Job Postings](images/skill_demand_top3_data_roles.png)
 
 *Bar graph visualizing the salary for the top 3 data roles and their top 5 skills associated with each.*
 
@@ -102,7 +102,7 @@ plt.show()
 Next, I examined how frequently the leading skills appeared in Data Analyst job postings during 2023. I grouped the postings by month and compared the percentage of postings that requested each of the top five skills. This makes it possible to see how demand changed over the course of the year.
 
 
-View my notebook with detailed steps here: [3_Skills_Trend](3_Skills_Trend.ipynb).
+View my notebook with detailed steps here: [3_Skills_Trend](3_Project/3_Skills_Trend.ipynb).
 
 ### Visualize Data
 
@@ -121,7 +121,7 @@ plt.show()
 
 ### Results
 
-![Trending Top Skills for Data Analysts in the US](images\skill_trend_DA.png)  
+![Trending Top Skills for Data Analysts in the US](images/skill_trend_DA.png)  
 *Line graph showing how the leading Data Analyst skills changed in demand during 2023.*
 
 ### Findings
@@ -134,7 +134,7 @@ plt.show()
 
 For the salary portion of the project, I limited the data to U.S. positions and compared median annual salaries. I first examined salary distributions for common data roles, including Data Scientist, Data Engineer, and Data Analyst, to understand how compensation differed between positions.
 
-View my notebook with detailed steps here: [4_Salary_Analysis](4_Salary_Analysis.ipynb).
+View my notebook with detailed steps here: [4_Salary_Analysis](3_Project/4_Salaries_analysis.ipynb).
 
 #### Visualize Data 
 
@@ -149,10 +149,10 @@ plt.show()
 
 #### Results
 
-![Salary Distributions of Data Jobs in the US](images\salary_poxplot.png)  
+![Salary Distributions of Data Jobs in the US](images/salary_poxplot.png)  
 *Box plot visualizing the salary distributions for the top 6 data job titles.*
 
-![Salary Distributions based on Data Analyst skills](images\data_analyst_salary_by_skills.png)  
+![Salary Distributions based on Data Analyst skills](images/data_analyst_salary_by_skills.png)  
 *Bar Chart empazsizing skill to salary relationship with in Data Analyst roles*
 
 ### Findings
@@ -190,7 +190,7 @@ plt.show()
 
 #### Results
 
-![Most Optimal Skills for Data Analysts in the US with Coloring by Technology](images\most_optimal-skills_for_data_analysts_in_the_us.png)  
+![Most Optimal Skills for Data Analysts in the US with Coloring by Technology](images/most_optimal-skills_for_data_analysts_in_the_us.png)  
 *Scatter plot comparing skill demand and median salary for Data Analyst skills, grouped by technology category.*
 
 ### Findings
